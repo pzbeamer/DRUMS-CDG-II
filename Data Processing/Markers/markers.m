@@ -63,8 +63,7 @@ pressure = data.Pdata(data.i_t1:data.i_te);
 
 %Phase 3
 
-
+        save('../../Results/markers.mat','alpha','beta','gamma','HRbeforeVal','HRafterVal','SBPbeforeVal','SBPafterVal')
         end
-save('../,./Results/markers.mat','alpha','beta','gamma','HRbeforeVal','HRafterVal','SBPbeforeVal','SBPafterVal')
     end    
 end

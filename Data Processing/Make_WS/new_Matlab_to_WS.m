@@ -50,7 +50,7 @@ rtdb = 100; %desired rest time for DB
 make_AS = 0;
 make_HUT = 0;
 make_DB = 0;
-make_VAL = 1;
+make_VAL = 0;
 
 %% Load In Matlab Files 
 %index 50 does not have blood pressure
