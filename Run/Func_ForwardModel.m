@@ -1,6 +1,6 @@
-%% Runs forward model. Inputs: patient file name and rest time. Outputs: HR and taus
+% Runs forward model. Inputs: patient file name and rest time. Outputs: HR and taus
 
-function Func_ForwardEval(pt_id,restTime)
+function Func_ForwardModel(pt_id,restTime)
     %pass in a file name to read and a vector of rest times needed
     %restTime = [start end]
     %Call "Driver basic" in an automated way

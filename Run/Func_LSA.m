@@ -1,4 +1,6 @@
-function [sens] = DriverBasic_sens(pt_id)
+%Runs local sensitivity analysis for one patient. Input: patient id.
+%Output: sens file
+function [sens] = Func_LSA(pt_id)
 addpath('../Core');
 
 %% Load data  
@@ -10,7 +12,7 @@ echoon  = 0;
 printon = 0; 
 
 %% Run Forward Evaluation
-Func_ForwardEval(pt_id, 30);
+Func_ForwardModel(pt_id, 30);
 
 %% Create Data Structure
 
