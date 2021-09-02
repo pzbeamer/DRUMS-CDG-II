@@ -190,7 +190,7 @@ for pt=[3:12]
                 end
 
 
-                save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/LSA/AS/',pt_id,'_AS_WS.mat'),... %Name of file
+                save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/Workspaces/AS/',pt_id,'_AS_WS.mat'),... %Name of file
                          'Age','ECG','Hdata','Pdata','Sex','SPdata','Tdata','flag',...
                          'AS_rest','AS_start','AS_end','notes','cell_row_for_pt') %Variables to save
             end
@@ -246,7 +246,7 @@ for pt=[3:12]
 
                
 
-                save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/LSA/HUT/',pt_id,'_HUT_WS.mat'),... %Name of file
+                save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/Workspaces/HUT/',pt_id,'_HUT_WS.mat'),... %Name of file
                          'Age','ECG','Hdata','Pdata','Sex','SPdata','Tdata','flag',...
                          'HUT_rest','HUT_start','HUT_end','notes','cell_row_for_pt') %Variables to save
             end
@@ -298,7 +298,7 @@ for pt=[3:12]
                 end
 
 
-                save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/LSA/Deep_Breathing/',pt_id,'_DB_WS.mat'),... %Name of file
+                save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/Workspaces/DB/',pt_id,'_DB_WS.mat'),... %Name of file
                          'Age','ECG','Hdata','Pdata','Sex','SPdata','Tdata','flag',...
                          'DB_rest','DB_start','DB_end','notes','cell_row_for_pt') %Variables to save
             end
@@ -411,7 +411,7 @@ for pt=[3:12]
                             disp(strcat('Val',num2str(i),' rest time does not meet desired for i=',num2str(pt)))
                         end
                         
-                        save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/LSA/Vals_New/',pt_id,'_val',num2str(i),'_WS.mat'),... %Name of file
+                        save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/Workspaces/Vals/',pt_id,'_val',num2str(i),'_WS.mat'),... %Name of file
                          'Age','ECG','Hdata','Pdata','Pth','Rdata','Sex','SPdata','Tdata','flag',...
                          'val_rest_start','val_start','val_end','val_rest_end','notes','cell_row_for_pt','val_dat')
                     end

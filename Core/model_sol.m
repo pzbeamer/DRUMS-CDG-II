@@ -1,6 +1,7 @@
 function [HR,rout,J,Outputs,Init] = model_sol(pars,data)
 
 global pars0 echoon
+pars
 pars = exp(pars); 
 
 %% Unpack structure 
