@@ -47,7 +47,7 @@ max_HPV_num = 872; % will change for all values
 rtas = 180; %desired rest time for AS
 rthut = 270; %desired rest time for HUT
 rtdb = 100; %desired rest time for DB
-make_AS = 0;
+make_AS = 1;
 make_HUT = 0;
 make_DB = 0;
 make_VAL = 0;
@@ -165,7 +165,7 @@ for pt=[3:12]
                 s = (1:100:length(AS_dat(:,1)))'; %Sampling vector 2.5 Hz
                 %Calculate needed quantities before you subsample down
                 pkprom = 25.*ones(max_HPV_num,1);
-                [SPdata S] = SBPcalc_ben(AS_dat(:,1),AS_dat(:,4),1);
+                [SPdata S] = SBPcalc_ben(AS_dat(:,1),AS_dat(:,4),1,0);
                 SPdata = SPdata(s);
                 sdat = AS_dat(s,:);
                 Tdata = sdat(:,1);
