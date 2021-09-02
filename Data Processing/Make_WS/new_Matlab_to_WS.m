@@ -47,7 +47,7 @@ max_HPV_num = 872; % will change for all values
 rtas = 180; %desired rest time for AS
 rthut = 270; %desired rest time for HUT
 rtdb = 100; %desired rest time for DB
-make_AS = 0;
+make_AS = 1;
 make_HUT = 0;
 make_DB = 0;
 make_VAL = 0;
@@ -165,7 +165,7 @@ for pt=[3:12]
                 s = (1:100:length(AS_dat(:,1)))'; %Sampling vector 2.5 Hz
                 %Calculate needed quantities before you subsample down
                 pkprom = 25.*ones(max_HPV_num,1);
-                [SPdata S] = SBPcalc_ben(AS_dat(:,1),AS_dat(:,4),1);
+                [SPdata S] = SBPcalc_ben(AS_dat(:,1),AS_dat(:,4),1,0);
                 SPdata = SPdata(s);
                 sdat = AS_dat(s,:);
                 Tdata = sdat(:,1);
@@ -190,7 +190,7 @@ for pt=[3:12]
                 end
 
 
-                save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/LSA/AS/',pt_id,'_AS_WS.mat'),... %Name of file
+                save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/Workspaces/AS/',pt_id,'_AS_WS.mat'),... %Name of file
                          'Age','ECG','Hdata','Pdata','Sex','SPdata','Tdata','flag',...
                          'AS_rest','AS_start','AS_end','notes','cell_row_for_pt') %Variables to save
             end
@@ -246,7 +246,7 @@ for pt=[3:12]
 
                
 
-                save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/LSA/HUT/',pt_id,'_HUT_WS.mat'),... %Name of file
+                save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/Workspaces/HUT/',pt_id,'_HUT_WS.mat'),... %Name of file
                          'Age','ECG','Hdata','Pdata','Sex','SPdata','Tdata','flag',...
                          'HUT_rest','HUT_start','HUT_end','notes','cell_row_for_pt') %Variables to save
             end
@@ -298,7 +298,7 @@ for pt=[3:12]
                 end
 
 
-                save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/LSA/Deep_Breathing/',pt_id,'_DB_WS.mat'),... %Name of file
+                save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/Workspaces/DB/',pt_id,'_DB_WS.mat'),... %Name of file
                          'Age','ECG','Hdata','Pdata','Sex','SPdata','Tdata','flag',...
                          'DB_rest','DB_start','DB_end','notes','cell_row_for_pt') %Variables to save
             end
@@ -411,7 +411,7 @@ for pt=[3:12]
                             disp(strcat('Val',num2str(i),' rest time does not meet desired for i=',num2str(pt)))
                         end
                         
-                        save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/LSA/Vals_New/',pt_id,'_val',num2str(i),'_WS.mat'),... %Name of file
+                        save(strcat('/Volumes/GoogleDrive/Shared drives/REU shared/Workspaces/Vals/',pt_id,'_val',num2str(i),'_WS.mat'),... %Name of file
                          'Age','ECG','Hdata','Pdata','Pth','Rdata','Sex','SPdata','Tdata','flag',...
                          'val_rest_start','val_start','val_end','val_rest_end','notes','cell_row_for_pt','val_dat')
                     end
