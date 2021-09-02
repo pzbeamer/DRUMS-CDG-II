@@ -1,4 +1,4 @@
-%% Runs forward model. Inputs: patient file name and rest time. Outputs: 
+%% Runs forward model. Inputs: patient file name and rest time. Outputs: HR and taus
 
 function Func_ForwardEval(pt_id,restTime)
     %pass in a file name to read and a vector of rest times needed
