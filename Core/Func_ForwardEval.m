@@ -137,8 +137,8 @@ data.i_t2      = i_t2;
 data.i_te      = i_te;
 data.i_t3      = i_t3; 
 data.i_t4      = i_t4;  
-%data.age       = Age; 
-%data.dt        = dt; 
+data.age       = Age; 
+data.dt        = dt; 
 
 %Global parameters substructure
 gpars.echoon = echoon; 
@@ -147,7 +147,8 @@ data.gpars   = gpars;
 
 %% Get nominal parameter values
 
-pars = load_data(data,pt_id); 
+[data] = load_data(pt_id); 
+pars  = data.pars
 
 %% Solve model with nominal parameters 
 

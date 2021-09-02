@@ -14,27 +14,27 @@ Func_ForwardEval(pt_id, 30);
 
 %% Create Data Structure
 
-% data.Tdata     = Tdata;
-% data.Pdata     = SPdata; 
-% data.Hdata     = Hdata;
-% data.Pthdata   = Pth;
-% data.Rdata     = Rdata; 
-% data.Pdata     = Pdata;
-%data.Pthbar    = Pthbar;
-%data.HminR     = HminR;
-%data.HmaxR     = HmaxR;
-%data.Hbar      = Hbar; 
-%data.Rbar      = Rbar; 
-% data.val_start = val_start; 
-% data.val_end   = val_end; 
-% data.i_ts      = i_ts; 
-% data.i_t1      = i_t1; 
-% data.i_t2      = i_t2; 
-% data.i_te      = i_te;
-% data.i_t3      = i_t3; 
-% data.i_t4      = i_t4;  
-% data.age       = Age; 
-% data.dt        = dt; 
+data.Tdata     = Tdata;
+data.Pdata     = SPdata; 
+data.Hdata     = Hdata;
+data.Pthdata   = Pth;
+data.Rdata     = Rdata; 
+data.Pdata     = Pdata;
+data.Pthbar    = Pthbar;
+data.HminR     = HminR;
+data.HmaxR     = HmaxR;
+data.Hbar      = Hbar; 
+data.Rbar      = Rbar; 
+data.val_start = val_start; 
+data.val_end   = val_end; 
+data.i_ts      = i_ts; 
+data.i_t1      = i_t1; 
+data.i_t2      = i_t2; 
+data.i_te      = i_te;
+data.i_t3      = i_t3; 
+data.i_t4      = i_t4;  
+data.age       = Age; 
+data.dt        = dt; 
 
 %% Get nominal parameter values
 

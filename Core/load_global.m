@@ -1,3 +1,4 @@
+%Feed a patient workspace, and it returns data necessary for optimization
 function [pars, lb, ub] = load_global(data, INDMAP)
 
 global pars0
