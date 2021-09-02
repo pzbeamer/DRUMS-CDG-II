@@ -147,8 +147,8 @@ data.gpars   = gpars;
 
 %% Get nominal parameter values
 
-[data] = load_data(pt_id); 
-pars  = data.pars
+pars = load_global(data,[1:22]); 
+pars
 
 %% Solve model with nominal parameters 
 
