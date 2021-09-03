@@ -178,36 +178,59 @@ pars
     
 %% Figures
 
-% Data Heart Rate
+% Heart Rate Data only
     figure(1) 
     plot(Tdata,Hdata,'LineWidth',2.5)
 
-% Model Heart Rate
+% Model Heart Rate only
     figure(2)
     plot(Tdata,HR,'LineWidth',2.5)
     
-% VM (Pressure?)
-    figure(3)
-    plot(val_dat(:,1),val_dat(:,4),'LineWidth',2.5)
+% Valsa
+figure(3)
+plot(val_dat(:,1),val_dat(:,4),'LineWidth',2.5)
 
-% VM Blood Pressure with Stages
-figure(4)
+% Six Panel Figure
+figure()
 
 hold on
-     set(gca,'Fontsize',28)
-     xline(Tdata(i_t2)-15,'k--')
-     rectangle('Position',[val_start-15 -10 Tdata(i_t1)-val_start 300],'FaceColor',[.85 .85 .85])
-     rectangle('Position',[Tdata(i_t1)-15 -10 val_end-Tdata(i_t1) 300],'FaceColor',[.95 .95 .95])
-     rectangle('Position',[val_end-15 -10 Tdata(i_t3)-val_end 300],'FaceColor',[.85 .85 .85])
-     rectangle('Position',[Tdata(i_t3)-15 -10 Tdata(i_t4)-Tdata(i_t3) 300],'FaceColor',[.95 .95 .95])
+%    set(gca,'Fontsize',28)
+% 
+     xline(Tdata(i_t2),'k--')
+     rectangle('Position',[val_start -10 Tdata(i_t1)-val_start 400],'FaceColor',[.8 .8 .8])
+     rectangle('Position',[Tdata(i_t1) -10 val_end-Tdata(i_t1) 400],'FaceColor',[.9 .9 .9])
+     rectangle('Position',[val_end -10 Tdata(i_t3)-val_end 400],'FaceColor',[.8 .8 .8])
+     rectangle('Position',[Tdata(i_t3) -10 Tdata(i_t4)-Tdata(i_t3) 400],'FaceColor',[.9 .9 .9])
 
-     plot(ones(2,1)*val_start,Plims,'k--')
-     plot(ones(2,1)*Tdata(i_t1),Plims,'k--')
-     plot(ones(2,1)*Tdata(i_t2),Plims,'k--')
-     plot(ones(2,1)*val_end,Plims,'k--')
-     plot(ones(2,1)*Tdata(i_t3),Plims,'k--')
-     plot(ones(2,1)*Tdata(i_t4),Plims,'k--')
-
+%      xline(Tdata(i_t2)-15,'k--')
+%      rectangle('Position',[val_start-15 -10 Tdata(i_t1)-val_start 300],'FaceColor',[.85 .85 .85])
+%      rectangle('Position',[Tdata(i_t1)-15 -10 val_end-Tdata(i_t1) 300],'FaceColor',[.95 .95 .95])
+%      rectangle('Position',[val_end-15 -10 Tdata(i_t3)-val_end 300],'FaceColor',[.85 .85 .85])
+%      rectangle('Position',[Tdata(i_t3)-15 -10 Tdata(i_t4)-Tdata(i_t3) 300],'FaceColor',[.95 .95 .95])
+=======
+% figure()
+% 
+% hold on
+% %    set(gca,'Fontsize',28)
+% % 
+%      xline(Tdata(i_t2),'k--')
+%      rectangle('Position',[val_start -10 Tdata(i_t1)-val_start 400],'FaceColor',[.8 .8 .8])
+%      rectangle('Position',[Tdata(i_t1) -10 val_end-Tdata(i_t1) 400],'FaceColor',[.9 .9 .9])
+%      rectangle('Position',[val_end -10 Tdata(i_t3)-val_end 400],'FaceColor',[.8 .8 .8])
+%      rectangle('Position',[Tdata(i_t3) -10 Tdata(i_t4)-Tdata(i_t3) 400],'FaceColor',[.9 .9 .9])
+% 
+% %      xline(Tdata(i_t2)-15,'k--')
+% %      rectangle('Position',[val_start-15 -10 Tdata(i_t1)-val_start 300],'FaceColor',[.85 .85 .85])
+% %      rectangle('Position',[Tdata(i_t1)-15 -10 val_end-Tdata(i_t1) 300],'FaceColor',[.95 .95 .95])
+% %      rectangle('Position',[val_end-15 -10 Tdata(i_t3)-val_end 300],'FaceColor',[.85 .85 .85])
+% %      rectangle('Position',[Tdata(i_t3)-15 -10 Tdata(i_t4)-Tdata(i_t3) 300],'FaceColor',[.95 .95 .95])
+% %      plot(ones(2,1)*val_start,Plims,'k--')
+% %      plot(ones(2,1)*Tdata(i_t1),Plims,'k--')
+% %     plot(ones(2,1)*Tdata(i_t2),Plims,'k--')
+% %      plot(ones(2,1)*val_end,Plims,'k--')
+% %      plot(ones(2,1)*Tdata(i_t3),Plims,'k--')
+% %      plot(ones(2,1)*Tdata(i_t4),Plims,'k--')
+% 
 %    hold on
 %    plot(val_dat(:,1),val_dat(:,4),'Color',[0 .7 1],'LineWidth',1)
 %    plot(Tdata-Tdata(1),SPdata,'b','LineWidth',3)
